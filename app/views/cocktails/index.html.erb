@@ -1,6 +1,24 @@
+<div class="banner">
+  <div class="banner-content">
+    <h1>cocktails</h1>
+    <p>for drinking</p>
+    <%= link_to "Add new cocktail", new_cocktail_path %>
+  </div>
 
-<% @cocktails.each do |cocktail| %>
-<p><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
-<% end %>
+</div>
 
-<p><%= link_to "Add new cocktail", new_cocktail_path %></p>
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/500x400/?cocktail');">
+          <div class="card-description">
+            <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+
+</div>
