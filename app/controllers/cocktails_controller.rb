@@ -5,6 +5,7 @@ class CocktailsController < ApplicationController
 
   def show
     @cocktail = Cocktail.find(params[:id])
+    @dose = Dose.new # cause it's used to render a Dose form on the Show page
   end
 
   def new
