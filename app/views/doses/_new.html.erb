@@ -1,0 +1,10 @@
+
+
+<%= simple_form_for [cocktail, dose] do |f| %>  <!-- NOT for @cocktail! then it doesn't find :ingredient -->
+  <%= f.association :ingredient %>
+  <%= f.input :description %>
+  <%= f.submit class: "btn btn-primary"%>
+<% end %>
+
+
+
