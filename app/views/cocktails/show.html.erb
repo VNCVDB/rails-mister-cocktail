@@ -1,4 +1,8 @@
-<h1><%= @cocktail.name %></h1>
+<div>
+  <h1><%= @cocktail.name %></h1>
+  <%= link_to "home", root_path %>
+</div>
+<%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
 <p>
   <% @cocktail.doses.each do |dose| %>
   <p> <%= dose.ingredient.name %> - <%= dose.description %> - <%= link_to "(delete)", dose_path(dose), method: :delete%></p>
@@ -22,4 +26,5 @@
       </li>
     <% end %>
   <% end %>
- <%= render "reviews/new", cocktail: @cocktail, review: @review %>
+
+
