@@ -9,7 +9,7 @@
   <% end %>
 </p>
  <%= render "doses/new", cocktail: @cocktail, dose: @dose %>
-
+ <%= render "reviews/new", cocktail: @cocktail, review: @review %>
   <% if @cocktail.reviews.empty? %>
     <p>Be the first to let a review</p>
   <% else %>
